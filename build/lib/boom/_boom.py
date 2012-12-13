@@ -166,9 +166,6 @@ def main():
     parser.add_argument('--headers', type=str,
                         help='HTTP headers to add header1:value1,header2:...')
 
-    parser.add_argument('-r', '--resolve', type=bool,
-                        help='Resolves the URL')
-
     group = parser.add_mutually_exclusive_group()
 
     group.add_argument('-n', '--requests', help='Number of requests',
