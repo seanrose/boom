@@ -180,8 +180,10 @@ def main():
     parser.add_argument('url', help='URL to hit', nargs='?')
     args = parser.parse_args()
 
-    # url = resolve(args.url)
-    url = args.url
+    if args.resolve:
+        url = resolve(args.url)
+    else:
+        url = args.url
 
     if args.version:
         print(__version__)

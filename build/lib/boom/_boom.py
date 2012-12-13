@@ -79,6 +79,7 @@ def print_server_info(url, method):
 def onecall(method, url, **options):
     start = time.time()
     res = method(url, **options)
+    print 'headers were: ' + str(res.request.headers)
     _stats[res.status_code].append(time.time() - start)
     sys.stdout.write('=')
     sys.stdout.flush()
@@ -165,6 +166,9 @@ def main():
 
     parser.add_argument('--headers', type=str,
                         help='HTTP headers to add header1:value1,header2:...')
+
+    parser.add_argument('-r', '--resolve', type=bool,
+                        help='Resolves the URL')
 
     group = parser.add_mutually_exclusive_group()
 
