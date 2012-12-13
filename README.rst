@@ -1,4 +1,3 @@
-
 .. image:: http://blog.ziade.org/boom.png
 
 
@@ -79,6 +78,7 @@ Boom! has more options::
                             Number of requests
     -d DURATION, --duration DURATION
                             Duration in seconds
+    --headers HEADERS,      Headers to include with the request (format key1:value1,key2:value2)
 
 
 Design
