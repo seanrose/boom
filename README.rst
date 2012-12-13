@@ -79,6 +79,7 @@ Boom! has more options::
     -d DURATION, --duration DURATION
                             Duration in seconds
     --headers HEADERS,      Headers to include with the request (format key1:value1,key2:value2)
+    -r, --resolve           Whether to resolve the URL
 
 
 Design
